@@ -95,17 +95,17 @@
     <!-- ヒーローヘッダー -->
     <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0 bg-zinc-950">
-            <!-- プレースホルダー背景 -->
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMzMzMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0iIzY2NjY2NiIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TUFJTiBLViBJTUFHRTwvdGV4dD48L3N2Zz4=')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-wa-sumi/95 via-wa-sumi/40 to-transparent"></div>
+            <!-- メインKV背景 -->
+            <div class="absolute inset-0 bg-[url('kv.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-wa-sumi/90 via-wa-sumi/30 to-wa-sumi/10"></div>
         </div>
 
         <div class="max-w-[1200px] mx-auto px-8 relative z-10 w-full flex flex-col items-center text-center mt-20">
             <!-- ロゴコンテナ：画像一体化完了時は画像を表示、未ドロップ時は1枚目のイメージを完全再現したSVGを表示 -->
             <!-- シックなグレーに赤いグローが最高に格好よく浮かび上がる設定 -->
             <div class="w-full max-w-[720px] mb-10 text-white drop-shadow-[0_0_35px_rgba(230,57,70,0.7)] flex justify-center items-center">
-                <img id="logo-image" src="" alt="KILLTUBE Logo" class="w-full h-auto object-contain hidden" />
-                <svg id="logo-svg" viewBox="0 0 950 240" class="w-full h-auto fill-current block animate-pulse" xmlns="http://www.w3.org/2000/svg">
+                <img id="logo-image" src="logo.png" alt="KILLTUBE Logo" class="w-full h-auto object-contain block" />
+                <svg id="logo-svg" viewBox="0 0 950 240" class="w-full h-auto fill-current hidden animate-pulse" xmlns="http://www.w3.org/2000/svg">
                     <!-- 1枚目の写真から完璧にトレースした極太手書きロゴSVG -->
                     <path d="M45,15 L88,12 L84,115 L125,18 L190,15 L122,125 L198,222 L132,225 L75,138 L78,228 L35,225 Z" />
                     <path d="M198,15 L236,25 L218,225 L180,215 Z" />
