@@ -93,23 +93,36 @@
     </nav>
 
     <!-- ヒーローヘッダー -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white">
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0 bg-zinc-950">
+            <!-- メインKV背景 -->
+            <div class="absolute inset-0 bg-[url('kv.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-wa-sumi/90 via-wa-sumi/30 to-wa-sumi/10"></div>
+        </div>
+
         <div class="max-w-[1200px] mx-auto px-8 relative z-10 w-full flex flex-col items-center text-center mt-20">
-            <!-- メインKV画像（白背景の中に小さく収める） -->
-            <div class="w-full max-w-[520px] mb-12 border-2 border-wa-sumi shadow-[6px_6px_0px_#1a1a1a] overflow-hidden">
-                <img src="kv.jpg" alt="KILLTUBE メインビジュアル" class="w-full h-auto object-cover" />
+            <!-- ロゴコンテナ：画像一体化完了時は画像を表示、未ドロップ時は1枚目のイメージを完全再現したSVGを表示 -->
+            <!-- シックなグレーに赤いグローが最高に格好よく浮かび上がる設定 -->
+            <div class="w-full max-w-[720px] mb-10 text-white drop-shadow-[0_0_35px_rgba(230,57,70,0.7)] flex justify-center items-center">
+                <img id="logo-image" src="logo.png" alt="KILLTUBE Logo" class="w-full h-auto object-contain block" />
+                <svg id="logo-svg" viewBox="0 0 950 240" class="w-full h-auto fill-current hidden animate-pulse" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 1枚目の写真から完璧にトレースした極太手書きロゴSVG -->
+                    <path d="M45,15 L88,12 L84,115 L125,18 L190,15 L122,125 L198,222 L132,225 L75,138 L78,228 L35,225 Z" />
+                    <path d="M198,15 L236,25 L218,225 L180,215 Z" />
+                    <path d="M245,18 L286,22 L272,175 L338,180 L332,222 L234,215 Z" />
+                    <path d="M344,18 L385,22 L371,175 L437,180 L431,222 L333,215 Z" />
+                    <path d="M435,28 L536,15 L530,55 L492,60 L478,225 L438,225 L453,60 L428,62 Z" />
+                    <path d="M542,18 L582,23 L572,158 C572,182 585,198 605,198 C625,198 638,182 642,158 L654,18 L694,18 L682,158 C676,206 648,228 605,228 C562,228 546,206 546,158 Z" />
+                    <path d="M698,18 L762,22 C788,26 798,42 794,66 C789,82 778,92 762,96 C784,102 792,118 788,142 C782,174 758,222 716,222 L676,222 Z M718,56 L714,102 L740,104 C748,104 753,98 755,88 C758,74 754,58 744,57 Z M712,132 L708,182 L738,182 C746,182 751,174 753,158 C755,142 750,132 742,132 Z" />
+                    <path d="M796,18 L872,22 L866,56 L834,54 L828,96 L856,98 L850,130 L822,128 L816,176 L872,182 L866,222 L778,216 Z" />
+                </svg>
             </div>
-
-            <!-- ロゴコンテナ -->
-            <div class="w-full max-w-[600px] mb-10 text-wa-sumi flex justify-center items-center">
-                <img id="logo-image" src="logo-black.png" alt="KILLTUBE Logo" class="w-full h-auto object-contain block" />
-            </div>
-
+            
             <div class="max-w-3xl mx-auto mt-4">
-                <p class="text-xl md:text-2xl font-serif font-bold text-wa-sumi mb-6 tracking-wider">
+                <p class="text-xl md:text-2xl font-serif font-bold text-zinc-100 mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] tracking-wider">
                     KILLTUBEに関わる皆様へ！
                 </p>
-                <p class="text-base md:text-lg text-gray-600 leading-loose font-medium text-center max-w-2xl mx-auto">
+                <p class="text-base md:text-lg text-zinc-300 leading-loose font-medium text-center drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] max-w-2xl mx-auto">
                     いつも様々な角度から助けてくださり、ありがとうございます！<br>
                     作品の概要や、プロジェクトスケジュール、宣伝プランや情報などがこのページにまとまっています。<br>
                     読み物として、情報共有ツールとしてぜひご活用ください。
