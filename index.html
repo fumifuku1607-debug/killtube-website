@@ -660,29 +660,27 @@
                         <h4 class="text-3xl font-bold font-serif border-b-4 border-wa-sumi pb-4 mb-10 flex items-center gap-4">街中看板プレイスメント (Duolingoコラボ)</h4>
                         
                         <!-- カルーセル型で連動するインタラクティブな街頭ポスター看板 -->
-                        <div class="bg-[#18181b] border-4 border-wa-sumi p-6 md:p-10 shadow-[8px_8px_0px_#71717a] relative rounded-2xl mb-8">
+                        <div class="bg-white border-4 border-wa-sumi p-6 md:p-10 shadow-[8px_8px_0px_#71717a] relative rounded-2xl mb-8">
                             <div class="flex flex-col items-center justify-center">
 
                                 <!-- 画像コンテナ（看板デザイン、タップで次に進むインタラクティブ動作） -->
-                                <div id="duo-billboard" onclick="nextDuoSlide()" class="bg-[#2c1315] border-street aspect-[3/4] w-full max-w-[560px] relative overflow-hidden flex items-center justify-center cursor-pointer shadow-2xl hover:shadow-[0_0_60px_rgba(230,57,70,0.3)] transition-all duration-300 group rounded-xl">
+                                <div id="duo-billboard" onclick="nextDuoSlide()" class="bg-white border-street aspect-[3/4] w-full max-w-[440px] relative overflow-hidden flex items-center justify-center cursor-pointer shadow-2xl hover:shadow-[0_0_60px_rgba(230,57,70,0.15)] transition-all duration-300 group rounded-xl">
 
                                     <!-- スライド 1 -->
-                                    <img id="duo-img-1" src="260602_ふーんKILLTUBE見る暇はあるんだね。 のコピー.jpg" onerror="this.onerror=null; this.src='260602_ふーんKILLTUBE見る暇はあるんだね。 のコピー_2.jpg'; this.onerror=function(){this.src='https://placehold.co/600x800/18181b/ffffff?text=Duolingo+Collab+1';};" alt="Duolingo コラボ 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100">
+                                    <img id="duo-img-1" src="260602_ふーんKILLTUBE見る暇はあるんだね。 のコピー.jpg" onerror="this.onerror=null; this.src='260602_ふーんKILLTUBE見る暇はあるんだね。 のコピー_2.jpg'; this.onerror=function(){this.src='https://placehold.co/600x800/ffffff/1a1a1a?text=Duolingo+Collab+1';};" alt="Duolingo コラボ 1" class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-100">
 
                                     <!-- スライド 2 -->
-                                    <img id="duo-img-2" src="260601_レッスンしてない人みーつけた のコピー.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x800/111111/ffffff?text=Duolingo+Collab+2';" alt="Duolingo コラボ 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="duo-img-2" src="260601_レッスンしてない人みーつけた のコピー.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x800/ffffff/1a1a1a?text=Duolingo+Collab+2';" alt="Duolingo コラボ 2" class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0">
 
                                     <!-- スライド 3 -->
-                                    <img id="duo-img-3" src="KILLTUBEより先にレッスンを.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x800/222222/ffffff?text=Duolingo+Collab+3';" alt="Duolingo コラボ 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
-
-                                    <!-- オーバーレイ案内 -->
-                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-center select-none">
-                                        <span class="text-white text-xs font-bold tracking-widest bg-wa-aka px-2 py-1 rounded-sm animate-pulse">看板をタップで切り替え &rarr;</span>
-                                    </div>
+                                    <img id="duo-img-3" src="KILLTUBEより先にレッスンを.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x800/ffffff/1a1a1a?text=Duolingo+Collab+3';" alt="Duolingo コラボ 3" class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0">
                                 </div>
 
+                                <!-- タップ案内（画像枠の外） -->
+                                <span class="text-wa-sumi text-xs font-bold tracking-widest bg-zinc-100 border border-wa-sumi px-3 py-1.5 rounded-sm mt-4 select-none">看板をタップで切り替え &rarr;</span>
+
                                 <!-- 画像下の番号ボタン -->
-                                <div class="flex items-center gap-4 mt-8">
+                                <div class="flex items-center gap-4 mt-6">
                                     <button onclick="setDuoSlide(0)" id="duo-btn-0" class="w-14 h-14 flex items-center justify-center bg-wa-aka hover:bg-wa-aka/80 text-white font-black text-xl border-2 border-transparent transition-all rounded-full shadow-street shadow-zinc-950 font-display">
                                         1
                                     </button>
@@ -1762,9 +1760,9 @@
                 
                 if (btn) {
                     if (i - 1 === duoCurrentIndex) {
-                        btn.className = "flex-1 bg-wa-aka hover:bg-wa-aka/80 text-white font-bold py-3 px-4 border-2 border-transparent transition-all text-xs tracking-widest text-center rounded-lg shadow-street shadow-zinc-950 font-serif";
+                        btn.className = "w-14 h-14 flex items-center justify-center bg-wa-aka hover:bg-wa-aka/80 text-white font-black text-xl border-2 border-transparent transition-all rounded-full shadow-street shadow-zinc-950 font-display";
                     } else {
-                        btn.className = "flex-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-bold py-3 px-4 border-2 border-transparent transition-all text-xs tracking-widest text-center rounded-lg shadow-street shadow-zinc-950 font-serif";
+                        btn.className = "w-14 h-14 flex items-center justify-center bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-black text-xl border-2 border-transparent transition-all rounded-full shadow-street shadow-zinc-950 font-display";
                     }
                 }
                 
